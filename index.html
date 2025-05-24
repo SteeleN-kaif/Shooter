@@ -1,0 +1,202 @@
+ <header>
+    <h1>Страны Европы</h1>
+    <nav>
+      <ul>
+        <li><a href="#western">Западная Европа</a></li>
+        <li><a href="#eastern">Восточная Европа</a></li>
+        <li><a href="#northern">Северная Европа</a></li>
+        <li><a href="#southern">Южная Европа</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Западная Европа -->
+    <section id="western">
+      <h2>Западная Европа</h2>
+      <div class="countries-container">
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/fr.png " alt="Флаг Франции">
+          <h3>Франция</h3>
+          <p>Столица: Париж</p>
+          <p>Население: 67 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="france" onclick="showAdditionalInfo('france')">
+            Подробнее
+          </label>
+        </div>
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/de.png " alt="Флаг Германии">
+          <h3>Германия</h3>
+          <p>Столица: Берлин</p>
+          <p>Население: 83 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="germany" onclick="showAdditionalInfo('germany')">
+            Подробнее
+          </label>
+        </div>
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/nl.png " alt="Флаг Нидерландов">
+          <h3>Нидерланды</h3>
+          <p>Столица: Амстердам</p>
+          <p>Население: 17 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="netherlands" onclick="showAdditionalInfo('netherlands')">
+            Подробнее
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Восточная Европа -->
+    <section id="eastern">
+      <h2>Восточная Европа</h2>
+      <div class="countries-container">
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/pl.png " alt="Флаг Польши">
+          <h3>Польша</h3>
+          <p>Столица: Варшава</p>
+          <p>Население: 38 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="poland" onclick="showAdditionalInfo('poland')">
+            Подробнее
+          </label>
+        </div>
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/ua.png " alt="Флаг Украины">
+          <h3>Украина</h3>
+          <p>Столица: Киев</p>
+          <p>Население: 41 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="ukraine" onclick="showAdditionalInfo('ukraine')">
+            Подробнее
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Северная Европа -->
+    <section id="northern">
+      <h2>Северная Европа</h2>
+      <div class="countries-container">
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/se.png " alt="Флаг Швеции">
+          <h3>Швеция</h3>
+          <p>Столица: Стокгольм</p>
+          <p>Население: 10 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="sweden" onclick="showAdditionalInfo('sweden')">
+            Подробнее
+          </label>
+        </div>
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/no.png " alt="Флаг Норвегии">
+          <h3>Норвегия</h3>
+          <p>Столица: Осло</p>
+          <p>Население: 5.4 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="norway" onclick="showAdditionalInfo('norway')">
+            Подробнее
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Южная Европа -->
+    <section id="southern">
+      <h2>Южная Европа</h2>
+      <div class="countries-container">
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/it.png " alt="Флаг Италии">
+          <h3>Италия</h3>
+          <p>Столица: Рим</p>
+          <p>Население: 60 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="italy" onclick="showAdditionalInfo('italy')">
+            Подробнее
+          </label>
+        </div>
+        <div class="country-card">
+          <img src="https://flagcdn.com/w320/es.png " alt="Флаг Испании">
+          <h3>Испания</h3>
+          <p>Столица: Мадрид</p>
+          <p>Население: 47 млн</p>
+          <label class="radio-label">
+            <input type="radio" name="countryInfo" value="spain" onclick="showAdditionalInfo('spain')">
+            Подробнее
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Дополнительная информация -->
+    <section class="info-box">
+      <h2>Дополнительная информация</h2>
+      <div id="info-content">
+        Выберите страну, чтобы увидеть дополнительную информацию.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 Все о странах Европы</p>
+    <p>Информация предоставлена для образовательных целей</p>
+  </footer>
+
+  <script>
+    const countryData = {
+      france: `
+        <strong>Франция</strong><br>
+        Известна своими произведениями искусства, модой и кухней.<br>
+        Главные достопримечательности: Эйфелева башня, Лувр.
+      `,
+      germany: `
+        <strong>Германия</strong><br>
+        Одна из ведущих экономик Европы.<br>
+        Известна фестивалями, особенно Октоберфестом.
+      `,
+      netherlands: `
+        <strong>Нидерланды</strong><br>
+        Страна велосипедов, каналов и тюльпанов.<br>
+        Столица Амстердам славится музеями Ван Гога и Рембрандта.
+      `,
+      poland: `
+        <strong>Польша</strong><br>
+        Богатая история и культурное наследие.<br>
+        Краков, Варшава и Замки Мазовии — главные достопримечательности.
+      `,
+      ukraine: `
+        <strong>Украина</strong><br>
+        Одна из крупнейших стран Европы.<br>
+        Киев — столица с древней историей и красивыми храмами.
+      `,
+      sweden: `
+        <strong>Швеция</strong><br>
+        Страна с высоким уровнем жизни и природными красотами.<br>
+        Стокгольм известен мостами и чистотой воды.
+      `,
+      norway: `
+        <strong>Норвегия</strong><br>
+        Страна фьордов и полярного сияния.<br>
+        Известна своим высоким уровнем жизни.
+      `,
+      italy: `
+        <strong>Италия</strong><br>
+        Родина искусства, пиццы и футбола.<br>
+        Рим, Венеция, Флоренция — культурные центры мира.
+      `,
+      spain: `
+        <strong>Испания</strong><br>
+        Живая культура, пляжи и богатая кухня.<br>
+        Барселона и Мадрид — популярные туристические направления.
+      `
+    };
+
+    function showAdditionalInfo(country) {
+      const content = countryData[country] || "Информация не найдена.";
+      document.getElementById("info-content").innerHTML = content;
+    }
+  </script>
+
+</body>
+</html>
